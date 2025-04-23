@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cценарий javascript</title>
+</head>
+<body style="background-color: #e6f7ff; text-align: center;">
+    <div class="header" style="margin: 20px 0;">
+        <h1>Антивирусные программы</h1>
+        <h2>Cценарий javascript</h2>
+        <img src="logo.png" alt="Логотип сайта">
+    </div>
+    <hr>
+    <div class="nav" style="margin: 20px 0;">
+        <a href="index.html">Антивирусные программы в наше время</a> |
+        <a href="history.html">История антивирусных программ</a> |
+        <a href="sources.html">Использованные источники</a> |
+        <a href="javascript.html">Cценарий javascript</a> |
+        <a href="#">Анкета (лр 5 с формой)</a> |
+        <a href="#">Таблицы из базы данных</a>
+    </div>
+    <hr>
+    <div class="main" style="text-align: left; padding: 0 20px;">
+        Введите скрипт:
+        <br>
+        <textarea id="mycode" rows=25 cols=197></textarea>
+        <br>
+        <button onclick= "document.getElementById('myrezult').value = eval(document.getElementById('mycode').value)">
+            Выполнить
+        </button>
+        <button onclick="document.getElementById('mycode').value=''; 
+        document.getElementById('myrezult').value=''; 
+        let canvas = document.getElementById('draw'); 
+        let context = canvas.getContext('2d');context.clearRect(0, 0, 600, 600);"> 
+            Очистить
+        </button>
+        <button onclick= "eval(document.getElementById('mycode').value)">
+            Отобразить рисунок  
+        </button>
+        <hr>
+        Результат:
+        <br>
+        <textarea id="myrezult" rows=10 cols=197></textarea>
+        <br><br>
+        <canvas id="drawingCanvas" width="600" height="600">Ваш браузер не поддерживает canvas</canvas>        
+    </div>
+    <hr>
+    <div class="footer" style="margin: 20px 0;">
+        © 2025. Все права защищены. Автор: Черных Дарья.
+    </div>
+</body>
+</html>
